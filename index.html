@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Square, Cube, Square Root & Cube Root</title>
+  <style type="text/css">
+  body{
+    background-color: #171717;
+  }
+  .head{
+    width: 70%;
+    height: auto;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #3B3B3B;
+    color: navajowhite;
+    border: 2px solid darkred;
+    border-top-left-radius:50px;
+    border-bottom-right-radius:35px; 
+  }
+    .body{
+      width: 70%;
+      height: auto;
+      background-color:#33363D;
+      margin: 50px auto;
+      padding: 30px;
+    }
+    input{
+     height: 30px;
+     width: 150px;
+     border: 2px solid blue;
+     font-size: 18px;
+    }
+    button{
+      background-color: orangered;
+      height: 35px;
+      width: 65px;
+      font-size: 18px;
+      border: 0.5px solid black;
+      color: white;
+    }
+    button:hover{
+      background-color: green;
+    }
+    .res{
+      color: white;
+    }
+    p{
+      color: red;
+      background-color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="head"><h3 align="justify">Find Square, Cube, Square Root & Cube Root by entering the number </h3></div>
+<div class="body" >
+  <input type="number" id="number" placeholder="Enter the number"> 
+  <button onclick="result()">Result</button>
+  <p id="mt"></p>
+<div class="res">  <h4 id="sq"></h4>
+  <h4 id="sqr"></h4>
+  <h4 id="cube"></h4>
+  <h4 id="cuber"></h4>
+</div>
+</div>
+<script type="text/javascript">
+  function result(){
+    var n = document.getElementById('number').value;
+    var sqr = n*n;
+    var sqroot = Math.sqrt(n);
+    var cube = n*n*n;
+    var cuberoot= Math.cbrt(n);
+    if(n== 0){
+      document.getElementById('mt').innerText = "Please All number except 0";
+          document.getElementById('sq').innerText = "";
+    
+    document.getElementById('sqr').innerText = "";
+    document.getElementById('cube').innerText = "";
+    document.getElementById('cuber').innerText = "";
+    }else{
+    document.getElementById('sq').innerText = n+"² = "+sqr;
+    
+    document.getElementById('sqr').innerText = "√"+n+" = "+sqroot;
+    document.getElementById('cube').innerText = n+"³= "+cube;
+    document.getElementById('cuber').innerText = "³√"+n+" = "+cuberoot;
+    document.getElementById('mt').innerText = "";
+  }}
+</script>
+</body>
+
+</html>
